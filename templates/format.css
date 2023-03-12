@@ -1,0 +1,56 @@
+/* Set default font size and color */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Style the header */
+header {
+  background-color: #da9c19;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the form */
+form {
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid #6f579b;
+  border-radius: 5px;
+}
+
+/* Style the form inputs */
+label, select, input[type="radio"] {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+select, input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}

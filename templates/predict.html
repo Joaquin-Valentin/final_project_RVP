@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Restaurant Viability Predictor</title>
+    <h1>Restaurant Viability Predictor</h1>
+    <h2>The outcome of this Machine Learning model does not indicate future success or even profitability. Remember to do some research, define your target market, your unique selling proposition, among other things. </h2>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/format.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+  </head>
+  <body>
+    <form action="/" method="POST">
+      <label for="zip_code">Where is your restaurant located?</label>
+      <select id="zip_code" name="zip_code" method="GET" action="/">
+        {% for zip_code in zip_codes %}
+          <option value="{{ zip_code}}" selected>{{ zip_code }}</option>
+        {% endfor %}
+      </select>
+      <br><br>
+      <label for="district">In which district is your restaurant located?</label>
+      <select id="district" name="district" method="GET" action="/">
+        {% for dist in districts %}
+        <option value="{{ dist }}">{{ dist }}</option>
+        {% endfor %}
+      </select>
+      <br><br>
+      <label for="website">Does your restaurant have a website?</label>
+      <select id="website" name="website">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+      <br><br>
+      <label for="delivery">Does your restaurant do delivery?</label>
+      <select id="delivery" name="delivery">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+      <br><br>
+      <label for="veggie_food">Does your restaurant have vegetarian options?</label>
+      <select id="veggie_food" name="veggie_food">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+      <br><br>
+      <label for="serves_alcohol">Does your restaurant serve alcohol?</label>
+      <select id="serves_alcohol" name="serves_alcohol">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+      <br><br>
+      <label for="reservable">Can people book a table at your restaurant?</label>
+      <select id="reservable" name="reservable">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+      <br><br>
+      <label for="dine_in">Can people eat at your establishment?</label>
+      <select id="dine_in" name="dine_in">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+      <br><br>
+      <label for="takeout">Can people order food for takeout at your establishment?</label>
+      <select id="takeout" name="takeout">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+      <br><br>
+      <label for="price_level">What's the price level of your restaurant?</label>
+      <select id="price_level" name="price_level" method="GET" action="/">
+        {% for level in price_levels %}
+        <option value="{{ level }}">{{ level }}</option>
+        {% endfor %}
+      </select>
+      <br><br>
+      <input type="submit" value="Submit">
+    </form>
+    {% if prediction == 1 %}
+    <h1>Your restaurant idea is likely to be viable. However, you should not disregard having a clear concept, a defined target market and a good location</h1>
+    {% elif prediction == 0 %}
+    <h1>Your restaurant idea needs to be improved, keep working on it!</h1>
+    {% endif %}
+    <!--<h1>{{prediction}}</h1>-->
+  </body>
+</html>
+
+
+

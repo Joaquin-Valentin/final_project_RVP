@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+  </head>
+  <body>
+    <h1>Welcome to my Flask App</h1>
+    <p>You can make your predictions here on my awesome website</p>
+    <a href="{{ url_for('predict') }}">Predict</a>
+  </body>
+</html>
