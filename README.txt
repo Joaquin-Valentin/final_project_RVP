@@ -1,7 +1,6 @@
 Final Bootcamp Project - Ironhack Data Analytics Bootcamp
 
-Restaurant viability predictor using data from Google Places API (6300 restaurants in the city of Madrid) and public data to enrich the original dataset, information on
-income, population, rent prices, among other things.
+Restaurant viability predictor using data from Google Places API (6300 restaurants in the city of Madrid) and public data from (datos.madrid.es) to enrich the original dataset, information on income, population, rent prices, among other things.
 
 Product roadmap:
 
@@ -19,5 +18,5 @@ Model Training: Train the selected model on the processed data to make predictio
 
 Model Evaluation: Evaluate the performance of the model using appropriate metrics such as accuracy, precision, recall (around 88-90%)
 
-Deployment: Deploy the model, building a Flask app, creating a user-friendly interface that can be used by stakeholders to predict the viability of a restaurant concept in a given city.
+Deployment: Deploy the model, building a Flask app, creating a user-friendly interface that can be used by stakeholders to predict the viability of a restaurant concept in a given city. 
 
