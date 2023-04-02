@@ -1,4 +1,6 @@
-Final Bootcamp Project - Ironhack Data Analytics Bootcamp
+Final Bootcamp Project 
+Ironhack Data Analytics Bootcamp
+
 
 Restaurant viability predictor using data from Google Places API (6300 restaurants in the city of Madrid) and public data from (datos.madrid.es) to enrich the original dataset, information on income, population, rent prices, among other things.
 
